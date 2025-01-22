@@ -49,12 +49,12 @@ if company_number:  # 04241161
     st.markdown(f'<p class="getting-data">Getting data...</p>', unsafe_allow_html=True)
     
     company_name_print = None
-    company_name_details = api_json(company_number, 'company', None)
+    company_name_details = project_functions.api_json(company_number, 'company', None)
     if 'company_name' in company_name_details.keys():
         company_name_print = company_name_details['company_name']
     
     
-    df_directors = get_directors(company_number)
+    df_directors = project_functions.get_directors(company_number)
     
     if df_directors.shape[0] == 0:
         st.write('-- NO PERSONS FOUND --')
@@ -64,7 +64,7 @@ if company_number:  # 04241161
         st.markdown("""<style>.small-font {font-size:8px !important; padding: 0; margin: 0; line-height: 6px;}</style>""", unsafe_allow_html=True)
         st.markdown(f'<p class="small-font">Hold tight. This can take a minute.</p>', unsafe_allow_html=True)
         
-        df_company_director_appointments = get_companyDirectorAppointments(df_directors) 
+        df_company_director_appointments = project_functions.get_companyDirectorAppointments(df_directors) 
     
         plot_formatting = {'title': company_name_print + ' | ' + company_number, 'node_scaler': 10, 'node_shape': 'square'}
         project_functions.plotNetwork(df_company_director_appointments, plot_formatting)
