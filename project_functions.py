@@ -11,6 +11,11 @@ import pyvis
 import re
 import requests
 
+headers = {
+    "api_key": st.secrets['api_key'],
+    "content-type": "application/json"
+}
+api_key = headers["api_key"]
 
 ### ---------------------------------------- FUNCTIONS 
 
