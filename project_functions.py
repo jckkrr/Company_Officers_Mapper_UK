@@ -11,8 +11,6 @@ import pyvis
 import re
 import requests
 
-api_key = "675a16ec-fb59-4570-a69c-30dd389a0ed7"
-
 ### ---------------------------------------- FUNCTIONS 
 
 ## A basic function to return resutls from API query to Companies House. 
