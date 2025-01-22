@@ -5,8 +5,6 @@
 
 ## streamlit run "C:\Users\Jack\Documents\Python_projects\streamlit_apps\uk_companies_house_mapper\streamlit_app.py"
 
-api_key = "675a16ec-fb59-4570-a69c-30dd389a0ed7"
-
 ### --------------------------------------- IMPORTS 
 
 import json
