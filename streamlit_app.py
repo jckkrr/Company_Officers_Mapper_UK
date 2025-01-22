@@ -24,6 +24,7 @@ headers = {
     "api_key": st.secrets['api_key'],
     "content-type": "application/json"
 }
+api_key = headers["api_key"]
 
 css = 'body, html, p, h1, .st-emotion-cache-1104ytp h1, [class*="css"] {font-family: "Inter", sans-serif;}'
 st.markdown( f'<style>{css}</style>' , unsafe_allow_html= True)
